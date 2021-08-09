@@ -43,12 +43,12 @@ function likeAction() {
     if (likedNumbers[currentNumber]) {
       const li = document.querySelector(`[data-number="${currentNumber}"]`);
       likedNumbers[currentNumber] += 1;
-      li.textContent = `The number ${currentNumber} has been liked ${likedNumbers[currentNumber]} times`;
+      li.textContent = `${currentNumber} has been liked ${likedNumbers[currentNumber]} times`;
     } else {
       likedNumbers[currentNumber] = 1;
       const li = document.createElement("li");
       li.dataset.number = currentNumber;
-      li.textContent = `The number ${currentNumber} has been liked 1 time`;
+      li.textContent = `${currentNumber} has been liked 1 time`;
       likeList.append(li);
     }
   }
